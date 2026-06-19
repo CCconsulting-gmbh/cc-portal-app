@@ -13,6 +13,12 @@ fixtures = [
     },
 ]
 
+# Schicke SPA-Oberfläche: alle /cc-portal/* URLs an die www/cc_portal-Seite leiten,
+# damit das clientseitige Vue-Routing funktioniert.
+website_route_rules = [
+    {"from_route": "/cc-portal/<path:app_path>", "to_route": "cc_portal"},
+]
+
 # Spätere Module hängen hier Geschäftslogik ein:
-# doc_events = { "CC Project": { "validate": "cc_portal.cc_portal.doctype.cc_project.cc_project.validate" } }
+# doc_events = { ... }
 # scheduler_events = { ... }
