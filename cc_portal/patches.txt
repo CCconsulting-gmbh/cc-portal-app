@@ -1,4 +1,4 @@
 [pre_model_sync]
-cc_portal.patches.create_cc_roles.execute
+cc_portal.patches.create_cc_roles
 
 [post_model_sync]
