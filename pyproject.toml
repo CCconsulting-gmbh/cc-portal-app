@@ -1,0 +1,14 @@
+[project]
+name = "cc_portal"
+authors = [
+    { name = "CC Consulting GmbH", email = "info@cc-consulting.gmbh" },
+]
+description = "CC Consulting Portal-Features auf Frappe (Projekte, Briefing, Rechnungen, Loyalty u.a.) – baut auf Frappe Helpdesk auf."
+requires-python = ">=3.10"
+readme = "README.md"
+dynamic = ["version"]
+dependencies = []
+
+[build-system]
+requires = ["flit_core >=3.4,<4"]
+build-backend = "flit_core.buildapi"
