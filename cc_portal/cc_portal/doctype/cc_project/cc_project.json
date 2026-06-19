@@ -1,0 +1,97 @@
+{
+ "actions": [],
+ "autoname": "CC-PRJ-.#####",
+ "creation": "2026-06-19 10:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "project_name",
+  "customer",
+  "column_break_1",
+  "status",
+  "progress",
+  "assigned_user",
+  "section_break_int",
+  "bitrix_deal_id"
+ ],
+ "fields": [
+  {
+   "fieldname": "project_name",
+   "fieldtype": "Data",
+   "label": "Projektname",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Kunde",
+   "options": "HD Customer",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Planung\nDesign\nEntwicklung\nLive",
+   "default": "Planung",
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "progress",
+   "fieldtype": "Int",
+   "label": "Fortschritt (%)"
+  },
+  {
+   "fieldname": "assigned_user",
+   "fieldtype": "Link",
+   "label": "Verantwortlich (IT)",
+   "options": "User"
+  },
+  {
+   "fieldname": "section_break_int",
+   "fieldtype": "Section Break",
+   "label": "Integration"
+  },
+  {
+   "fieldname": "bitrix_deal_id",
+   "fieldtype": "Data",
+   "label": "Bitrix Deal-ID",
+   "read_only": 1
+  }
+ ],
+ "links": [],
+ "modified": "2026-06-19 10:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "CC Portal",
+ "name": "CC Project",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "create": 1, "read": 1, "write": 1, "delete": 1,
+   "report": 1, "export": 1, "print": 1, "share": 1, "email": 1
+  },
+  {
+   "role": "CC Vertrieb",
+   "create": 1, "read": 1, "write": 1, "report": 1, "print": 1, "share": 1
+  },
+  {
+   "role": "CC IT",
+   "read": 1, "write": 1, "report": 1, "print": 1, "share": 1
+  },
+  {
+   "role": "CC Manager",
+   "read": 1, "report": 1, "print": 1, "export": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

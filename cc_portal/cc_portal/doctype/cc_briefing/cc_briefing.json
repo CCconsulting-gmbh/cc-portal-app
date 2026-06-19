@@ -1,0 +1,119 @@
+{
+ "actions": [],
+ "autoname": "CC-BRF-.#####",
+ "creation": "2026-06-19 10:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "project",
+  "filled_by",
+  "section_inhalt",
+  "goal",
+  "scope",
+  "column_break_2",
+  "budget",
+  "deadline",
+  "references",
+  "section_freigabe",
+  "approved_by_customer",
+  "completed"
+ ],
+ "fields": [
+  {
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "label": "Projekt",
+   "options": "CC Project",
+   "reqd": 1,
+   "unique": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "filled_by",
+   "fieldtype": "Link",
+   "label": "Erfasst von (Vertrieb)",
+   "options": "User"
+  },
+  {
+   "fieldname": "section_inhalt",
+   "fieldtype": "Section Break",
+   "label": "Briefing-Inhalt"
+  },
+  {
+   "fieldname": "goal",
+   "fieldtype": "Text",
+   "label": "Ziel des Kunden",
+   "reqd": 1
+  },
+  {
+   "fieldname": "scope",
+   "fieldtype": "Text",
+   "label": "Umfang / Leistungen",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "budget",
+   "fieldtype": "Data",
+   "label": "Budget"
+  },
+  {
+   "fieldname": "deadline",
+   "fieldtype": "Date",
+   "label": "Deadline"
+  },
+  {
+   "fieldname": "references",
+   "fieldtype": "Small Text",
+   "label": "Referenzen / Beispiele"
+  },
+  {
+   "fieldname": "section_freigabe",
+   "fieldtype": "Section Break",
+   "label": "Freigabe"
+  },
+  {
+   "fieldname": "approved_by_customer",
+   "fieldtype": "Check",
+   "label": "Vom Kunden freigegeben"
+  },
+  {
+   "fieldname": "completed",
+   "fieldtype": "Check",
+   "label": "Vollständig (Gate für Status 'Entwicklung')",
+   "in_list_view": 1
+  }
+ ],
+ "links": [],
+ "modified": "2026-06-19 10:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "CC Portal",
+ "name": "CC Briefing",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "create": 1, "read": 1, "write": 1, "delete": 1,
+   "report": 1, "export": 1, "print": 1, "share": 1, "email": 1
+  },
+  {
+   "role": "CC Vertrieb",
+   "create": 1, "read": 1, "write": 1, "report": 1, "print": 1, "share": 1
+  },
+  {
+   "role": "CC IT",
+   "read": 1, "report": 1, "print": 1
+  },
+  {
+   "role": "CC Manager",
+   "read": 1, "report": 1, "print": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
