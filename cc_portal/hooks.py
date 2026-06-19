@@ -13,12 +13,8 @@ fixtures = [
     },
 ]
 
-# Schicke SPA-Oberfläche: alle /cc-portal/* URLs an die www/cc_portal-Seite leiten,
-# damit das clientseitige Vue-Routing funktioniert.
-website_route_rules = [
-    {"from_route": "/cc-portal", "to_route": "cc_portal"},
-    {"from_route": "/cc-portal/<path:app_path>", "to_route": "cc_portal"},
-]
+# Hinweis: Unsere Module nutzen den eingebauten Frappe-Desk (/app) statt einer
+# eigenen SPA. Das frontend/-Verzeichnis + www/cc_portal bleiben ungenutzt im Repo.
 
 # Spätere Module hängen hier Geschäftslogik ein:
 # doc_events = { ... }
