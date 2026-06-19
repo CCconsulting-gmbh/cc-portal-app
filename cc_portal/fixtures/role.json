@@ -1,6 +1,6 @@
 [
- {"doctype": "Role", "role_name": "CC Vertrieb", "desk_access": 1},
- {"doctype": "Role", "role_name": "CC IT", "desk_access": 1},
- {"doctype": "Role", "role_name": "CC Buchhalter", "desk_access": 1},
- {"doctype": "Role", "role_name": "CC Manager", "desk_access": 1}
+ {"doctype": "Role", "name": "CC Vertrieb", "role_name": "CC Vertrieb", "desk_access": 1},
+ {"doctype": "Role", "name": "CC IT", "role_name": "CC IT", "desk_access": 1},
+ {"doctype": "Role", "name": "CC Buchhalter", "role_name": "CC Buchhalter", "desk_access": 1},
+ {"doctype": "Role", "name": "CC Manager", "role_name": "CC Manager", "desk_access": 1}
 ]
