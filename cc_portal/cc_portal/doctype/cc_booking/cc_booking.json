@@ -1,0 +1,132 @@
+{
+ "actions": [],
+ "autoname": "CC-BKG-.#####",
+ "creation": "2026-06-22 12:05:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "customer",
+  "service",
+  "column_break_1",
+  "status",
+  "booking_date",
+  "assigned_user",
+  "section_pricing",
+  "price",
+  "column_break_2",
+  "points_awarded",
+  "invoice",
+  "section_notes",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Kunde",
+   "options": "HD Customer",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "service",
+   "fieldtype": "Link",
+   "label": "Leistung",
+   "options": "CC Service",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Angefragt\nBestätigt\nErledigt\nStorniert",
+   "default": "Angefragt",
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "booking_date",
+   "fieldtype": "Datetime",
+   "label": "Termin",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "assigned_user",
+   "fieldtype": "Link",
+   "label": "Zuständig",
+   "options": "User"
+  },
+  {
+   "fieldname": "section_pricing",
+   "fieldtype": "Section Break",
+   "label": "Preis & Verrechnung"
+  },
+  {
+   "fieldname": "price",
+   "fieldtype": "Currency",
+   "label": "Preis (netto)",
+   "options": "EUR"
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "points_awarded",
+   "fieldtype": "Check",
+   "label": "Treuepunkte gutgeschrieben",
+   "read_only": 1
+  },
+  {
+   "fieldname": "invoice",
+   "fieldtype": "Link",
+   "label": "Rechnung",
+   "options": "CC Invoice",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_notes",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notizen"
+  }
+ ],
+ "links": [],
+ "modified": "2026-06-22 12:05:00.000000",
+ "modified_by": "Administrator",
+ "module": "CC Portal",
+ "name": "CC Booking",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "create": 1, "read": 1, "write": 1, "delete": 1,
+   "report": 1, "export": 1, "print": 1, "share": 1, "email": 1
+  },
+  {
+   "role": "CC Manager",
+   "create": 1, "read": 1, "write": 1, "delete": 1,
+   "report": 1, "export": 1, "print": 1, "share": 1
+  },
+  {
+   "role": "CC Vertrieb",
+   "create": 1, "read": 1, "write": 1, "report": 1, "print": 1
+  },
+  {
+   "role": "CC Buchhalter",
+   "read": 1, "report": 1, "print": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
