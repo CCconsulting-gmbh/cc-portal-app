@@ -1,0 +1,173 @@
+{
+ "actions": [],
+ "autoname": "CC-INV-.#####",
+ "creation": "2026-06-22 10:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "customer",
+  "project",
+  "column_break_1",
+  "status",
+  "issue_date",
+  "due_date",
+  "section_amounts",
+  "amount_net",
+  "tax_rate",
+  "column_break_2",
+  "amount_tax",
+  "amount_total",
+  "section_payment",
+  "paid_date",
+  "payment_method",
+  "section_integration",
+  "bitrix_invoice_id",
+  "pdf",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Kunde",
+   "options": "HD Customer",
+   "reqd": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "label": "Projekt",
+   "options": "CC Project"
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Entwurf\nOffen\nBezahlt\nÜberfällig\nStorniert",
+   "default": "Entwurf",
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "issue_date",
+   "fieldtype": "Date",
+   "label": "Rechnungsdatum"
+  },
+  {
+   "fieldname": "due_date",
+   "fieldtype": "Date",
+   "label": "Fällig am"
+  },
+  {
+   "fieldname": "section_amounts",
+   "fieldtype": "Section Break",
+   "label": "Beträge"
+  },
+  {
+   "fieldname": "amount_net",
+   "fieldtype": "Currency",
+   "label": "Netto",
+   "options": "EUR",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "tax_rate",
+   "fieldtype": "Percent",
+   "label": "MwSt-Satz (%)",
+   "default": "19"
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "amount_tax",
+   "fieldtype": "Currency",
+   "label": "MwSt",
+   "options": "EUR",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amount_total",
+   "fieldtype": "Currency",
+   "label": "Gesamt (brutto)",
+   "options": "EUR",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "section_payment",
+   "fieldtype": "Section Break",
+   "label": "Zahlung"
+  },
+  {
+   "fieldname": "paid_date",
+   "fieldtype": "Date",
+   "label": "Bezahlt am"
+  },
+  {
+   "fieldname": "payment_method",
+   "fieldtype": "Select",
+   "label": "Zahlungsart",
+   "options": "\nÜberweisung\nSEPA-Lastschrift\nKreditkarte\nBar"
+  },
+  {
+   "fieldname": "section_integration",
+   "fieldtype": "Section Break",
+   "label": "Integration & Anhang"
+  },
+  {
+   "fieldname": "bitrix_invoice_id",
+   "fieldtype": "Data",
+   "label": "Bitrix Rechnungs-ID",
+   "read_only": 1
+  },
+  {
+   "fieldname": "pdf",
+   "fieldtype": "Attach",
+   "label": "PDF"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notizen"
+  }
+ ],
+ "links": [],
+ "modified": "2026-06-22 10:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "CC Portal",
+ "name": "CC Invoice",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "create": 1, "read": 1, "write": 1, "delete": 1,
+   "report": 1, "export": 1, "print": 1, "share": 1, "email": 1
+  },
+  {
+   "role": "CC Buchhalter",
+   "create": 1, "read": 1, "write": 1, "delete": 1,
+   "report": 1, "export": 1, "print": 1, "share": 1, "email": 1
+  },
+  {
+   "role": "CC Manager",
+   "read": 1, "report": 1, "print": 1, "export": 1
+  },
+  {
+   "role": "CC Vertrieb",
+   "read": 1, "report": 1, "print": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
