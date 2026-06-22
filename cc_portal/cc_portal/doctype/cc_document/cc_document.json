@@ -1,0 +1,157 @@
+{
+ "actions": [],
+ "autoname": "CC-DOC-.#####",
+ "creation": "2026-06-22 13:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "title",
+  "customer",
+  "project",
+  "column_break_1",
+  "document_type",
+  "status",
+  "requires_signature",
+  "section_file",
+  "file",
+  "notes",
+  "section_signature",
+  "signed_by_name",
+  "signed_at",
+  "column_break_2",
+  "signature_image",
+  "signature_token"
+ ],
+ "fields": [
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "label": "Titel",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Kunde",
+   "options": "HD Customer",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "label": "Projekt",
+   "options": "CC Project"
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "document_type",
+   "fieldtype": "Select",
+   "label": "Art",
+   "options": "Vertrag\nAngebot\nDokument\nSonstiges",
+   "default": "Dokument",
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Entwurf\nZur Signatur\nSigniert\nAbgelehnt",
+   "default": "Entwurf",
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "requires_signature",
+   "fieldtype": "Check",
+   "label": "Signatur erforderlich"
+  },
+  {
+   "fieldname": "section_file",
+   "fieldtype": "Section Break",
+   "label": "Datei"
+  },
+  {
+   "fieldname": "file",
+   "fieldtype": "Attach",
+   "label": "Dokument (PDF)"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notizen"
+  },
+  {
+   "fieldname": "section_signature",
+   "fieldtype": "Section Break",
+   "label": "Signatur"
+  },
+  {
+   "fieldname": "signed_by_name",
+   "fieldtype": "Data",
+   "label": "Unterzeichnet von",
+   "read_only": 1
+  },
+  {
+   "fieldname": "signed_at",
+   "fieldtype": "Datetime",
+   "label": "Unterzeichnet am",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "signature_image",
+   "fieldtype": "Attach Image",
+   "label": "Unterschrift",
+   "read_only": 1
+  },
+  {
+   "fieldname": "signature_token",
+   "fieldtype": "Data",
+   "label": "Signatur-Token",
+   "read_only": 1,
+   "hidden": 1,
+   "no_copy": 1
+  }
+ ],
+ "links": [],
+ "modified": "2026-06-22 13:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "CC Portal",
+ "name": "CC Document",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "create": 1, "read": 1, "write": 1, "delete": 1,
+   "report": 1, "export": 1, "print": 1, "share": 1, "email": 1
+  },
+  {
+   "role": "CC Vertrieb",
+   "create": 1, "read": 1, "write": 1, "report": 1, "print": 1, "share": 1
+  },
+  {
+   "role": "CC Manager",
+   "create": 1, "read": 1, "write": 1, "report": 1, "print": 1, "share": 1
+  },
+  {
+   "role": "CC IT",
+   "read": 1, "report": 1, "print": 1
+  },
+  {
+   "role": "CC Buchhalter",
+   "read": 1, "report": 1, "print": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
