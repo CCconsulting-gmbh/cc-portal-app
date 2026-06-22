@@ -1,0 +1,107 @@
+{
+ "actions": [],
+ "autoname": "CC-LTX-.#####",
+ "creation": "2026-06-22 11:05:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "customer",
+  "account",
+  "column_break_1",
+  "transaction_type",
+  "points",
+  "section_detail",
+  "reason",
+  "reference",
+  "reward"
+ ],
+ "fields": [
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Kunde",
+   "options": "HD Customer",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "account",
+   "fieldtype": "Link",
+   "label": "Loyalty-Konto",
+   "options": "CC Loyalty Account",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "transaction_type",
+   "fieldtype": "Select",
+   "label": "Art",
+   "options": "Gutschrift\nEinlösung\nKorrektur",
+   "default": "Gutschrift",
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "points",
+   "fieldtype": "Int",
+   "label": "Punkte (+/-)",
+   "reqd": 1,
+   "in_list_view": 1,
+   "description": "Positiv = Gutschrift, negativ = Einlösung/Abzug"
+  },
+  {
+   "fieldname": "section_detail",
+   "fieldtype": "Section Break",
+   "label": "Details"
+  },
+  {
+   "fieldname": "reason",
+   "fieldtype": "Data",
+   "label": "Grund"
+  },
+  {
+   "fieldname": "reference",
+   "fieldtype": "Data",
+   "label": "Referenz (z. B. Projekt/Rechnung)"
+  },
+  {
+   "fieldname": "reward",
+   "fieldtype": "Link",
+   "label": "Eingelöste Prämie",
+   "options": "CC Loyalty Reward"
+  }
+ ],
+ "links": [],
+ "modified": "2026-06-22 11:05:00.000000",
+ "modified_by": "Administrator",
+ "module": "CC Portal",
+ "name": "CC Loyalty Transaction",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "create": 1, "read": 1, "write": 1, "delete": 1,
+   "report": 1, "export": 1, "print": 1, "share": 1, "email": 1
+  },
+  {
+   "role": "CC Manager",
+   "create": 1, "read": 1, "write": 1, "delete": 1,
+   "report": 1, "export": 1, "print": 1, "share": 1
+  },
+  {
+   "role": "CC Vertrieb",
+   "create": 1, "read": 1, "report": 1, "print": 1
+  },
+  {
+   "role": "CC Buchhalter",
+   "read": 1, "report": 1, "print": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
